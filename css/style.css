@@ -1,0 +1,339 @@
+/* colors for buttons on title card */
+:root {
+    --buttonOneColor: #f93753;
+    --buttonTwoColor: #f9ad37;
+    --buttonThreeColor:#37bef9;
+    --buttonFourColor: #84b551;
+    --buttonFiveColor: #ea37f9;
+
+    --primaryColor: #000000;
+    --secondaryColor: #E5E5E7;
+    --tertiaryColor: #888888;
+    --quartinaryColor: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* website and title card font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:visited { color: var(--primaryColor)}
+
+/* Some basic stuff */
+
+.title, .subheading, .description, .extraDescription {
+    margin: 1vh 0;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.subheading {
+    font-size: 1.25rem;
+    margin-top: 1vh;
+}
+
+.description {
+    font-size: 1rem;
+    color: var(--tertiaryColor);
+}
+
+.extraDescription {
+    font-size: 1rem;
+    color: var(--tertiaryColor);
+    font-style: italic;
+}
+
+.sectionTitle {
+    border-bottom: 2px var(--secondaryColor) solid;
+    padding-bottom: .5vw;
+}
+
+/* title card background */
+.card {
+    background-color: var(--quartinaryColor);
+    padding: 1vw 3vw 1vw 3vw;
+}
+/*  Buttons on title card boxes */
+.buttonClass {
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+}
+
+/* hover coloring */
+.buttonColor1:hover, .buttonColor2:hover, .buttonColor3:hover, .buttonColor4:hover, .buttonColor5:hover {
+    background: black;
+}
+/* Add hover colors */
+.buttonColor1 { background: var(--buttonOneColor) }
+.buttonColor2 { background: var(--buttonTwoColor) }
+.buttonColor3 { background: var(--buttonThreeColor) }
+.buttonColor4 { background: var(--buttonFourColor) }
+.buttonColor5 { background: var(--buttonFiveColor) }
+
+.boxBorder {
+    border-bottom: 1px var(--secondaryColor) solid;
+}
+
+/* Hoving colors for items on the page */
+.writingsItem:hover, .projectsItem:hover, .awrdCertDiv:hover, .workExperienceItem:hover, .educationItem:hover {
+    background-color: var(--secondaryColor);
+}
+
+.container {
+    width: auto;
+    height: auto;
+    background-color: black;
+
+}
+
+#welcomeContainer {
+    height: 100vh;
+    background-color: #1d1d1f;
+}
+
+.resumeDiv {
+   width: 85vw; 
+}
+
+#sidebarDiv {
+    height: 100%;
+    width: 15vw;
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: var(--secondaryColor);
+    text-align: center;
+}
+
+.sidebarImage {
+    margin-top: 5vh;
+    width: 10vw;
+}
+
+.pageNav {
+    display: grid;
+    text-align: center;
+    color: var(--primaryColor)
+}
+
+.pageNavItem {
+   text-decoration: none; 
+   margin-top: 2vw;
+}
+
+.socialMediaDiv {
+    margin-top: 3vh;
+    display: inline-flex;
+}
+
+.socialMediaIcon {
+    padding: 1vw;
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.resumeButton {
+    display: inline-flex;
+    background: var(--tertiaryColor);
+    color: white;
+    padding: .5vw;
+    margin: auto;
+}
+
+.resumeImage {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+}
+
+/* Welcome Card Div */
+#welcomeCard {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    background-color: var(--quartinaryColor); 
+    position: relative;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.userImageDiv {
+    width: 50%;
+    height: 100%;
+}
+
+.userImage {
+    display: block;
+    height: 100%;
+    width: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.userInfoDiv {
+    width: 40%;
+    height: 100%;
+    margin: 2vw;
+}
+
+#userName {
+    font-size: 45px;
+    font-weight: 900;
+}
+
+#workOptions {
+    display: inline;
+}
+
+/* id on CM*/
+#workExperience {
+    display: none;
+}
+/*  parent on CM*/
+.workExperienceItem {
+    display: inline-flex;
+    width: 100%;
+}
+
+/* image on CM */
+.workExperienceImage {
+    width: 8vw;
+    height: 100%;
+    margin: auto 2vw;
+}
+
+ /* text on CM */
+.workExperienceDiv {
+    display: inline;
+}
+/* ID for education on community manager*/
+#education {
+    display: none;
+}
+/* Education item on CM */
+.educationItem {
+    display: inline-flex;
+    width: 100%;
+    padding: 1vh;
+}
+
+.educationImage {
+    width: 10vw;
+    margin: auto 2vw;
+}
+
+/* education tex on cm */
+.educationItemDiv{
+    display: inline-block;
+}
+#projects {
+    display: none;
+}
+
+.projectsItem {
+    display: inline-flex;
+    width: 100%;
+    text-decoration: none;
+    color: var(--primaryColor)
+}
+
+.projectsItemImage {
+    max-width: 5vw;
+    height: 100%;
+    margin: auto 1vw;
+}
+
+.projectDescriptionDiv {
+    margin-left: 1vw;
+}
+
+#writings {
+    display: none;
+}
+
+.writingsItem {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: var(--primaryColor);
+}
+
+
+#awardsAndCertificates {
+    display: none;
+}
+
+/* related skills id on CM*/
+#skills {
+    display: none;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+}
+
+/* bottom related skills box placement and parent on CM*/
+
+#advanced {
+    grid-column: 1 / 2;}
+
+#competant {
+    grid-column: 2 / 3;
+}
+
+#familiar {
+    grid-column: 3 / 3;
+}
+
+/* related skills box shape on CM*/
+.skillItem {
+    align-items: center; 
+    text-align: center;
+    padding: .5vw;
+    margin: .5vw;
+    transition: all .2s ease;
+    box-shadow: 0 3px 13px rgba(100,110,140,.1),0 2px 4px rgba(100,110,140,.15);   
+    display: inline-flex;
+}
+
+.skillItem:hover {
+    transform: translate3D(0,-1px,0);
+    box-shadow: 0 8px 22px rgba(100,110,140,.2),0 5px 18px rgba(100,110,140,.25);
+}
+
+/* related skills image on CM*/
+.skillImage {
+    height: 5vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.skillTitle {
+    padding: 0 1vw;
+}

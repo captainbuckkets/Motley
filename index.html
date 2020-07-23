@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Should dynamically be pulled from settings -->
+        <title>Page Title</title>
+
+        <!-- Import css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- Import Roboto -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="welcomeContainer">
+                <!-- Welcome Card Div -->
+                <div id="welcomeCard">
+                    <!-- Welcome Card -->
+                
+                    <div class="userImageDiv">
+                    <!-- User picture -->
+                        <!-- Not loaded from the JSON -->
+                        <img class="userImage" src="img/portrait.jpg">
+                    </div>
+                        
+                    <div class="userInfoDiv">
+                    <!-- User info div -->
+                        <div id="userName">
+                        
+                        <!-- Loaded from JSON -->
+                        </div>
+
+                        <div id="userDescription">
+                        </div>
+
+                        <h2 class="subheading">I am an employer looking for:</h2>
+                        <div id="workOptions">
+                    <!-- Areas of work -->
+                        <!-- Loaded from the JSON -->
+                        <!-- eventListeners -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar div -->
+            <div id="sidebarDiv">
+            </div>
+
+            <!-- Resume div -->
+            <div class="resumeDiv">
+                <!-- Work Experience Card -->
+                <div class="card" id="workExperience">
+                    <div class="sectionTitle">
+                        <h1>Work Experience</h1>
+                    </div>
+                </div>
+
+                <!-- Education Experience Card -->
+                <div class="card" id="education">
+                    <!-- Education Title -->
+                    <div class="sectionTitle">
+                        <h1>Education</h1>
+                    </div>
+                </div>
+
+                <!-- Projects Card -->
+                <div class="card" id="projects">
+                    <!-- Projects Title -->
+                    <div class="sectionTitle">
+                        <h1>Projects</h1>
+                    </div>
+                </div>
+
+                <!-- Writings Card -->
+                <div class="card" id="writings">
+                    <!-- Projects Title -->
+                    <div class="sectionTitle">
+                        <h1>Writings</h1>
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div class="card" id="skills">
+                    <!-- Skills Title -->
+                    <div class="sectionTitle">
+                        <h1>Related Skills</h1>
+                    </div>
+                    <!-- Skills grid -->
+                    <div class="skillsGrid">
+                        <!-- Advanced div -->
+                        <div id="advanced">
+                            <h2>Advanced</h2>
+                        </div>
+                        <!-- Competant -->
+                        <div id="competent">
+                            <h2>Competant</h2>
+                        </div>
+                        <!-- Familiar -->
+                        <div id="familiar">
+                            <h2>Familiar</h2>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Awards Card -->
+                <div class="card" id="awardsAndCertificates">
+                    <!-- Awards -->
+                    <div class="sectionTitle">
+                        <h1>Awards</h1>
+                    </div>
+                    <div id="awards">
+                        <!-- Awards Title -->
+                    </div>
+                    <!-- Certificates -->
+                    <div class="sectionTitle">
+                        <h1>Certificates</h1>
+                    </div>
+                    <div id="certificates">
+                        <!-- Awards Title -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Must be at the end -->
+        <script src="js/script.js"></script>
+    </body>
+    <!-- Probably -->
+</html>
