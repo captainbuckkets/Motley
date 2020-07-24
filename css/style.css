@@ -302,11 +302,11 @@ a:visited { color: var(--primaryColor)}
 #advanced {
     grid-column: 1 / 2;}
 
-#competant {
+#adequate {
     grid-column: 2 / 3;
 }
 
-#familiar {
+#entryLevel {
     grid-column: 3 / 3;
 }
 

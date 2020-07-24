@@ -159,7 +159,7 @@ function loadWorkExperience(tag) {
     document.getElementById("workExperience").style.display = "block"
 
     for (let i in data.workExperience) {
-        console.log(data.workExperience[i])
+        //console.log(data.workExperience[i])
 
         var len = data.workExperience[i].tags.length
 
@@ -172,7 +172,7 @@ function loadWorkExperience(tag) {
 }
 
 function createWorkExperienceElement(object, tag) {
-    console.log("object")
+    //console.log("object")
 
     wEdiv = document.createElement("div")
     wEdiv.className = "workExperienceItem boxBorder"
@@ -197,11 +197,6 @@ function createWorkExperienceElement(object, tag) {
     wEEmployer.innerText = object.employer
     wEDescriptionDiv.appendChild(wEEmployer)
 
-    // Write the location
-    wELocation = document.createElement("h3")
-    wELocation.innerText = object.location
-    wEDescriptionDiv.appendChild(wELocation)
-
     // Write the start date
     wEDuration = document.createElement("h4")
     wEDuration.innerText = object.duration
@@ -224,7 +219,7 @@ function loadEducation(tag) {
     document.getElementById("education").style.display = "block"
 
     for (let i in data.education) {
-        console.log(data.education[i])
+        //console.log(data.education[i])
 
         educationDiv = document.createElement("div")
         educationDiv.className = "educationItem"
@@ -409,16 +404,16 @@ function loadSkills(tag) {
         createSkill(data.skills.advanced[i], "advanced")
       }
     }
-    for (let i in data.skills.competent) {
-      if (data.skills.competent[i].tags.includes(tag)) {
-        //console.log(skills.competent[i])
-        createSkill(data.skills.competent[i], "competent")
+    for (let i in data.skills.adequate) {
+      if (data.skills.adequate[i].tags.includes(tag)) {
+        //console.log(skills.adequate[i])
+        createSkill(data.skills.adequate[i], "adequate")
       }
     }
-    for (let i in data.skills.familiar) {
-      if (data.skills.familiar[i].tags.includes(tag)) {
-        //console.log(skills.familiar[i])
-        createSkill(data.skills.familiar[i], "familiar")
+    for (let i in data.skills.entryLevel) {
+      if (data.skills.entryLevel[i].tags.includes(tag)) {
+        //console.log(skills.entryLevel[i])
+        createSkill(data.skills.entryLevel[i], "entryLevel")
       }
     }
 }

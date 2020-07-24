@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <!-- Head -->
     <head>
         <!-- Should dynamically be pulled from settings -->
-        <title>Editor</title>
+        <title>Page Title</title>
 
         <!-- Import css -->
         <link rel="stylesheet" type="text/css" href="css/editorStyle.css">
@@ -13,48 +12,105 @@
     </head>
 
     <body>
+        <div class="container">
 
-        <!-- Settings div -->
-        <h1>Settings</h1>
-        <div id="settings" class="editorSection"></div>
+            <!-- Sidebar div -->
+            <div id="sidebarDiv">
+            </div>
 
-        <!-- Work Experience div -->
-        <h1>Work Experience</h1>
-        <div id="workExperience"></div>
+            <!-- Resume div -->
+            <div class="resumeDiv">
+                <!-- Work Experience Card -->
+                <div class="card" id="settings">
+                    <div class="sectionTitle">
+                        <h1>Settings</h1>
+                    </div>
+                </div>
 
-        <!-- Education div -->
-        <h1>Education</h1>
-        <div id="education"></div>
+                <div class="card" id="workExperience">
+                    <div class="sectionTitle">
+                        <h1>Work Experience</h1>
+                    </div>
+                </div>
 
-        <!-- Education div -->
-        <h1>Projects</h1>
-        <div id="projects"></div>
+                <!-- Education Experience Card -->
+                <div class="card" id="education">
+                    <!-- Education Title -->
+                    <div class="sectionTitle">
+                        <h1>Education</h1>
+                    </div>
+                </div>
 
-        <!-- Education div -->
-        <h1>Writings</h1>
-        <div id="writings"></div>
+                <!-- Projects Card -->
+                <div class="card" id="projects">
+                    <!-- Projects Title -->
+                    <div class="sectionTitle">
+                        <h1>Projects</h1>
+                    </div>
+                </div>
 
-        <!-- Education div -->
-        <div id="skills">
-            <h1>Skills</h1>
-            <h2>Advanced</h2>
-            <div id="advanced"></div>
-            <h2>Competent</h2>
-            <div id="competent"></div>
-            <h2>Familiar</h2>
-            <div id="familiar"></div>
+                <!-- Writings Card -->
+                <div class="card" id="writings">
+                    <!-- Projects Title -->
+                    <div class="sectionTitle">
+                        <h1>Writings</h1>
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div class="card" id="skills">
+                    <!-- Skills Title -->
+                    <div class="sectionTitle">
+                        <h1>Related Skills</h1>
+                    </div>
+                    <!-- Skills grid -->
+                    <div class="skillsGrid">
+                        <!-- Advanced div -->
+                        <div id="advanced">
+                            <h2>Advanced</h2>
+                        </div>
+                        <!-- Competant -->
+                        <div id="adequate">
+                            <h2>Adequate</h2>
+                        </div>
+                        <!-- Familiar -->
+                        <div id="entryLevel">
+                            <h2>Entry-Level</h2>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- Awards Card -->
+                <div class="card" id="awardsAndCertificates">
+                    <!-- Awards -->
+                    <div class="sectionTitle">
+                        <h1>Awards</h1>
+                    </div>
+                    <div id="awards">
+                        <!-- Awards Title -->
+                    </div>
+                    <!-- Certificates -->
+                    <div class="sectionTitle">
+                        <h1>Certificates</h1>
+                    </div>
+                    <div id="certificates">
+                        <!-- Awards Title -->
+                    </div>
+                </div>
+
+                <!-- JSON Card -->
+                <div class="card">
+                    <!-- JSON -->
+                    <div class="sectionTitle">
+                        <h1>JSON Output</h1>
+                    </div>
+                    <textarea id="jsonOutput"></textarea>
+                </div>
+            </div>
         </div>
-
-        <!-- Education div -->
-        <h1>Awards and Certificates</h1>
-        <div id="awards"></div>
-        <div id="education"></div>
-
-        <!-- Output -->
-        <h1>Output</h1>
-        <div id="output" contenteditable=true></div>
 
         <!-- Must be at the end -->
         <script src="js/editorScript.js"></script>
     </body>
-</html> 
+    <!-- Probably -->
+</html>

@@ -10,11 +10,6 @@
       "Financial Analysis",
       "All"
     ],
-    "summaries": {
-      "Community Management": "I am an experience community manager with over five years experience across multiple domains.",
-      "Web Developement": "I am an experience web developer who has worked on a number of projects",
-      "Cryptocurrency": "I have five years experience in cryptocurrency trading and developement"
-    },
     "socialMedia": {
       "behance": "",
       "facebook": "",
@@ -38,28 +33,24 @@
       ],
       "image": "img/workExperience/peercoin.png",
       "employer": "The Peercoin Foundation",
-      "location": "Remote",
       "duration": "August 2018 to Current",
       "responsibilities": {
-        "resp1": {
+        "0": {
           "description": "Act as the primary representative on behalf of the Foundation to coordinate partnerships and new opportunities",
           "tags": [
-            "Community Management",
-            "All"
+            "Community Management"
           ]
         },
-        "resp2": {
+        "1": {
           "description": "Moderating and managing a community of around 6,000 users",
           "tags": [
-            "Community Management",
-            "All"
+            "Community Management"
           ]
         },
-        "resp3": {
+        "2": {
           "description": "Complete assigned special projects",
           "tags": [
-            "Web Developement",
-            "All"
+            "Web Developement"
           ]
         }
       }
@@ -72,14 +63,12 @@
       ],
       "image": "img/education/cuboulder.png",
       "employer": "Office of Information Technology at the University of Colorado Boulder",
-      "location": "Boulder, Colorado",
       "duration": "August 2016 to May 2018",
       "responsibilities": {
-        "resp1": {
+        "0": {
           "description": "Directed client's relations to IT and campus services",
           "tags": [
-            "Customer Service",
-            "All"
+            "Customer Service"
           ]
         }
       }
@@ -91,6 +80,12 @@
       "dates": "2015-2018",
       "degree": "Bachelor's of Psychology",
       "image": "img/education/cuboulder.png"
+    },
+    "1": {
+      "institute": "Arapahoe Community College",
+      "dates": "2014-2015",
+      "degree": "Associaties",
+      "image": "img/education/cuboulder.png"
     }
   },
   "projects": {
@@ -100,8 +95,7 @@
       "tools": "React, Javascript, Sass, Go, HTML, CSS, Adobe Illustrator, Adobe Photoshop",
       "tags": [
         "Web Development",
-        "Community Management",
-        "All"
+        "Community Management"
       ],
       "projectImage": "img/projects/agave.png",
       "projectLink": "https://github.com/Agave-Wallet/agave"
@@ -112,8 +106,7 @@
       "tools": "HTML, CSS, Javascript, Adobe Animate, Adobe Indesign, Adobe Illustrator, Adobe Photoshop",
       "tags": [
         "Web Development",
-        "Community Management",
-        "All"
+        "Community Management"
       ],
       "projectImage": "img/workExperience/peercoin.png",
       "projectLink": "https://www.peercoin.net/"
@@ -126,8 +119,7 @@
       "link": "https://medium.com/@buckkets/the-next-step-for-esports-quant-modeling-e6bb76f3b9c7?source=friends_link&sk=f3bbf48f0246012409b0dc52108f979f",
       "tags": [
         "Community Management",
-        "Financial Analysis",
-        "All"
+        "Financial Analysis"
       ]
     },
     "1": {
@@ -136,8 +128,7 @@
       "link": "https://medium.com/@buckkets/retrospective-look-at-enrons-price-chart-a-technical-analysis-viewpoint-28f9677d8c88?source=friends_link&sk=b9e7b43649bb3e86e01c2ad41ae32278",
       "tags": [
         "Community Management",
-        "Finance Analysis",
-        "All"
+        "Finance Analysis"
       ]
     }
   },
@@ -147,7 +138,6 @@
         "title": "Adobe Illustrator",
         "image": "img/skills/illustrator.png",
         "tags": [
-          "All",
           "Graphic Design"
         ]
       },
@@ -155,27 +145,24 @@
         "title": "Adobe Photoshop",
         "image": "img/skills/photoshop.png",
         "tags": [
-          "All",
           "Graphic Design"
         ]
       },
       "2": {
         "title": "Adobe InDesign",
-        "image": "img/skills/photoshop.png",
+        "image": "img/skills/indesign.png",
         "tags": [
-          "All",
           "Graphic Design",
           "Web Design"
         ]
       }
     },
-    "competent": {
+    "adequate": {
       "0": {
         "title": "AutoCAD",
         "image": "img/skills/autocad.png",
         "tags": [
-          "Community Management",
-          "All"
+          "Community Management"
         ]
       },
       "1": {
@@ -195,7 +182,7 @@
         ]
       }
     },
-    "familiar": {
+    "entryLevel": {
       "0": {
         "title": "Amazon Web Services",
         "image": "img/skills/aws.png",
