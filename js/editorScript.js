@@ -1304,12 +1304,13 @@ function outputJson() {
     json += '"projects": {'
 
     for (let p of projects) {
+        console.log(p)
         var inputs = p.getElementsByTagName("input")
         json += '"' + projCounter + '": {'
             json += '"title":' + '"' + inputs[0].value + '",'
             json += '"description":' + '"' + inputs[1].value + '",'
             json += '"tools":' + '"' + inputs[2].value + '",'
-            json += '"image":' + '"' + inputs[3].value + '",'
+            json += '"projectImage":' + '"' + inputs[3].value + '",'
             json += '"projectLink":' + '"' + inputs[4].value + '",'
             var tags = inputs[5].value.split(",")
             tags = '\"' + tags.join('\",\"') + '\"';
