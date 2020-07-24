@@ -930,7 +930,7 @@ function createProjects(object, tag) {
     // Write what tools were used on the project
     projectsTools = document.createElement("input")
     projectsTools.addEventListener("input", outputJson)
-    projectsTools.value = "Utilized: " + object.tools
+    projectsTools.value = object.tools
     projectsTools.placeholder = "Project Tools"
     projectsDescriptionDiv.appendChild(projectsTools)
 
