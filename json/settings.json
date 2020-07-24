@@ -94,6 +94,7 @@
       "description": "Agave Wallet is a second layer solution for agnostic cross-chain asset managment",
       "tools": "React, Javascript, Sass, Go, HTML, CSS, Adobe Illustrator, Adobe Photoshop",
       "tags": [
+        "All",
         "Web Development",
         "Community Management"
       ],
@@ -105,6 +106,7 @@
       "description": "Carried out website prototype to deployment in a four week sprint (Dec. 2018-Jan. 2019).  Was additionally responsible for the animations visible from the home page.",
       "tools": "HTML, CSS, Javascript, Adobe Animate, Adobe Indesign, Adobe Illustrator, Adobe Photoshop",
       "tags": [
+        "All",
         "Web Development",
         "Community Management"
       ],
@@ -118,6 +120,7 @@
       "description": "This is an article about the next steps for Esports betting modeling and my experrience after completing one of the only models for DOTA 2 predictive betting.",
       "link": "https://medium.com/@buckkets/the-next-step-for-esports-quant-modeling-e6bb76f3b9c7?source=friends_link&sk=f3bbf48f0246012409b0dc52108f979f",
       "tags": [
+        "All",
         "Community Management",
         "Financial Analysis"
       ]
@@ -127,6 +130,7 @@
       "description": "This is a historical look at ENRON's stock price using widely available technical analysis indicators to prove that the price collapse was not only visible to common traders but that financial damages could have largely been avoided if fundamental analysis was discounted.",
       "link": "https://medium.com/@buckkets/retrospective-look-at-enrons-price-chart-a-technical-analysis-viewpoint-28f9677d8c88?source=friends_link&sk=b9e7b43649bb3e86e01c2ad41ae32278",
       "tags": [
+        "All",
         "Community Management",
         "Finance Analysis"
       ]
@@ -138,6 +142,7 @@
         "title": "Adobe Illustrator",
         "image": "img/skills/illustrator.png",
         "tags": [
+          "All",
           "Graphic Design"
         ]
       },
@@ -145,6 +150,7 @@
         "title": "Adobe Photoshop",
         "image": "img/skills/photoshop.png",
         "tags": [
+          "All",
           "Graphic Design"
         ]
       },
@@ -152,6 +158,7 @@
         "title": "Adobe InDesign",
         "image": "img/skills/indesign.png",
         "tags": [
+          "All",
           "Graphic Design",
           "Web Design"
         ]
@@ -162,6 +169,7 @@
         "title": "AutoCAD",
         "image": "img/skills/autocad.png",
         "tags": [
+          "All",
           "Community Management"
         ]
       },
