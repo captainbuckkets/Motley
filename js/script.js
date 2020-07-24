@@ -76,13 +76,8 @@ function loadSidebar(tag) {
     // User description
     userSummary = document.createElement("p")
     userSummary.className = "description"
+    userSummary.innerText = data.settings.description
     sidebar.appendChild(userSummary)
-
-    for (let s in data.settings.summaries) {
-        if (s == tag) {
-          userSummary.innerText = data.settings.summaries[s]
-        } 
-    }
 
     // Page anchors
     // Might use settings to disable these things.  Unsure

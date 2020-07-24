@@ -4,8 +4,6 @@ fetch("json/settings.json")
 .then(data => initJSON(data))
 
 function initJSON(data) {
-  console.log(data)
-
   window.data = data
 
   var projectsParent = document.getElementById("workOptions")
@@ -95,16 +93,9 @@ function loadSidebar() {
     addCertificate.innerText = "Add Certificate"
     daddy.appendChild(addCertificate)
     addCertificate.addEventListener("click", createCertificate)
-    // output JSOON
-    jsonButton = document.createElement("div")
-    jsonButton.className = "buttonClass addButton"
-    jsonButton.innerText = "Output JSON"
-    daddy.appendChild(jsonButton)
-    jsonButton.addEventListener("click", outputJson)
 }
 
 function createExperience() {
-    console.log(this)
 
     wEdiv = document.createElement("div")
     wEdiv.className = "workExperienceItem boxBorder"
@@ -123,6 +114,7 @@ function createExperience() {
 
     wETitle = document.createElement("input")
     wETitle.placeholder = "Job Title"
+    wETitle.addEventListener("input", outputJson)
     wEDescriptionDiv.appendChild(wETitle)
 
     // Write the employer
@@ -131,6 +123,7 @@ function createExperience() {
     wEDescriptionDiv.appendChild(wEEmployerLabel)
 
     wEEmployer = document.createElement("input")
+    wEEmployer.addEventListener("input", outputJson)
     wEEmployer.placeholder = "Employer"
     wEDescriptionDiv.appendChild(wEEmployer)
 
@@ -140,6 +133,7 @@ function createExperience() {
     wEDescriptionDiv.appendChild(wEDurationLabel)
 
     wEDuration = document.createElement("input")
+    wEDuration.addEventListener("input", outputJson)
     wEDuration.placeholder = "Job Description"
     wEDescriptionDiv.appendChild(wEDuration)
 
@@ -149,6 +143,7 @@ function createExperience() {
     wEDescriptionDiv.appendChild(wEImgLabel)
 
     wEImgLocation = document.createElement("input")
+    wEImgLocation.addEventListener("input", outputJson)
     wEImgLocation.placeholder = "Employer Image Location"
     wEDescriptionDiv.appendChild(wEImgLocation)
 
@@ -166,6 +161,7 @@ function createExperience() {
     responsibilitiesDiv.appendChild(wEResponsibilityLabel)
 
     wEResponsibility = document.createElement("input")
+    wEResponsibility.addEventListener("input", outputJson)
     wEResponsibility.placeholder = "Responsibility"
     responsibilitiesDiv.appendChild(wEResponsibility)
 
@@ -174,6 +170,7 @@ function createExperience() {
     responsibilitiesDiv.appendChild(wETagsLabel)
 
     wETags = document.createElement("input")
+    wETags.addEventListener("input", outputJson)
     wETags.placeholder = "Tags"
     responsibilitiesDiv.appendChild(wETags)
 
@@ -203,6 +200,7 @@ function createExperience() {
         removeExperienceButton.addEventListener("click", removeExperience)
 
     document.getElementById("workExperience").appendChild(wEdiv)
+    outputJson()
 }
 
 function createEducation() {
@@ -218,18 +216,22 @@ function createEducation() {
         educationDiv.appendChild(educationItemDiv)
 
         educationTitle = document.createElement("input")
+        educationTitle.addEventListener("input", outputJson)
         educationTitle.placeholder = "University Name"
         educationItemDiv.appendChild(educationTitle)
 
         educationDates = document.createElement("input")
+        educationTitle.addEventListener("input", outputJson)
         educationDates.placeholder = "Attendance Dates"
         educationItemDiv.appendChild(educationDates)
 
         educationDegree = document.createElement("input")
+        educationDegree.addEventListener("input", outputJson)
         educationDegree.placeholder = "Degree"
         educationItemDiv.appendChild(educationDegree)
 
         educationImageSrc = document.createElement("input")
+        educationImageSrc.addEventListener("input", outputJson)
         educationImageSrc.placeholder = "University Image"
         educationItemDiv.appendChild(educationImageSrc)
         
@@ -246,7 +248,7 @@ function createEducation() {
         removeEducationButton.addEventListener("click", removeEducation)
 
         document.getElementById("education").appendChild(educationDiv)
-
+        outputJson()
 }
 
 function createProject() {
@@ -264,30 +266,36 @@ function createProject() {
 
     // Write the project title
     projectsTitle = document.createElement("input")
+    projectsTitle.addEventListener("input", outputJson)
     projectsTitle.placeholder = "Project Title"
     projectsDescriptionDiv.appendChild(projectsTitle)
 
     // Write the project description
     projectsDescription = document.createElement("input")
+    projectsDescription.addEventListener("input", outputJson)
     projectsDescription.placeholder = "Project Description"
     projectsDescriptionDiv.appendChild(projectsDescription)
 
     // Write what tools were used on the project
     projectsTools = document.createElement("input")
+    projectsTools.addEventListener("input", outputJson)
     projectsTools.placeholder = "Project Tools"
     projectsDescriptionDiv.appendChild(projectsTools)
 
     // Projects Image src
 
     projectsLink = document.createElement("input")
+    projectsLink.addEventListener("input", outputJson)
     projectsLink.placeholder = "Project Link"
     projectsDescriptionDiv.appendChild(projectsLink)
 
     projectsImageSource = document.createElement("input")
+    projectsImageSource.addEventListener("input", outputJson)
     projectsImageSource.placeholder = "Project Image Source"
     projectsDescriptionDiv.appendChild(projectsImageSource)
 
     projectTags = document.createElement("input")
+    projectTags.addEventListener("input", outputJson)
     projectTags.placeholder = "Project Tags"
     projectsDescriptionDiv.appendChild(projectTags)
 
@@ -304,6 +312,7 @@ function createProject() {
     removeProjectButton.addEventListener("click", removeProject)
 
     document.getElementById("projects").appendChild(projectsDiv)
+    outputJson()
 }
 
 function createWriting() {
@@ -312,20 +321,24 @@ function createWriting() {
 
      // Write the article title
     writingsTitle = document.createElement("input")
+    writingsTitle.addEventListener("input", outputJson)
     writingsTitle.placeholder = "Writing Title"
     writingsDiv.appendChild(writingsTitle)
 
     // Write the article description
     writingDescription = document.createElement("input")
+    writingDescription.addEventListener("input", outputJson)
     writingDescription.placeholder = "Writing Description"
     writingsDiv.appendChild(writingDescription)
 
     writingTags = document.createElement("input")
+    writingTags.addEventListener("input", outputJson)
     writingTags.placeholder = "Writing Tags"
     // writingTags.value = writingTags.innerText.split(',').join(', ')
     writingsDiv.appendChild(writingTags)
 
     writingLink = document.createElement("input")
+    writingLink.addEventListener("input", outputJson)
     writingLink.placeholder = "Link"
     writingsDiv.appendChild(writingLink)
 
@@ -342,6 +355,7 @@ function createWriting() {
     removeWritingButton.addEventListener("click", removeWriting)
 
   document.getElementById("writings").appendChild(writingsDiv)
+  outputJson()
 }
 
 function createAdvanced() {
@@ -350,17 +364,20 @@ function createAdvanced() {
 
     // Write the skill title
     skillTitle = document.createElement("input")
+    skillTitle.addEventListener("input", outputJson)
     skillTitle.placeholder = "Skill Title"
     skillDiv.appendChild(skillTitle)
 
     // Write the skill image location
     skillImageLocation = document.createElement("input")
+    skillImageLocation.addEventListener("input", outputJson)
     skillImageLocation.className = "description"
     skillImageLocation.placeholder = "Skill Image Location"
     skillDiv.appendChild(skillImageLocation)
 
     // Write the skill tag
     skillImageTag = document.createElement("input")
+    skillImageTag.addEventListener("input", outputJson)
     skillImageTag.className = "description"
     skillImageTag.placeholder = "Skill Tags"
     skillDiv.appendChild(skillImageTag)
@@ -378,6 +395,7 @@ function createAdvanced() {
     removeSkillButton.addEventListener("click", removeSkill)
 
   document.getElementById("advanced").appendChild(skillDiv)
+  outputJson()
 }
 
 function createAdequate() {
@@ -386,17 +404,20 @@ function createAdequate() {
 
     // Write the skill title
     skillTitle = document.createElement("input")
+    skillTitle.addEventListener("input", outputJson)
     skillTitle.placeholder = "Skill Title"
     skillDiv.appendChild(skillTitle)
 
     // Write the skill image location
     skillImageLocation = document.createElement("input")
+    skillImageLocation.addEventListener("input", outputJson)
     skillImageLocation.className = "description"
     skillImageLocation.placeholder = "Skill Image Location"
     skillDiv.appendChild(skillImageLocation)
 
     // Write the skill tag
     skillImageTag = document.createElement("input")
+    skillImageTag.addEventListener("input", outputJson)
     skillImageTag.className = "description"
     skillImageTag.placeholder = "Skill Tags"
     skillDiv.appendChild(skillImageTag)
@@ -414,6 +435,7 @@ function createAdequate() {
     removeSkillButton.addEventListener("click", removeSkill)
 
   document.getElementById("adequate").appendChild(skillDiv)
+  outputJson()
 }
 
 function createEntry() {
@@ -422,16 +444,19 @@ function createEntry() {
 
     // Write the skill title
     skillTitle = document.createElement("input")
+    skillTitle.addEventListener("input", outputJson)
     skillTitle.placeholder = "Skill Title"
     skillDiv.appendChild(skillTitle)
 
     // Write the skill image location
     skillImageLocation = document.createElement("input")
+    skillImageLocation.addEventListener("input", outputJson)
     skillImageLocation.placeholder = "Skill Image Location"
     skillDiv.appendChild(skillImageLocation)
 
     // Write the skill tag
     skillImageTag = document.createElement("input")
+    skillImageTag.addEventListener("input", outputJson)
     skillImageTag.placeholder = "Skill Tags"
     skillDiv.appendChild(skillImageTag)
 
@@ -448,6 +473,7 @@ function createEntry() {
     removeSkillButton.addEventListener("click", removeSkill)
 
   document.getElementById("entryLevel").appendChild(skillDiv)
+  outputJson()
 }
 
 function createCertificate() {
@@ -456,21 +482,25 @@ function createCertificate() {
 
     // Title
     acTitle = document.createElement("input")
+    acTitle.addEventListener("input", outputJson)
     acTitle.placeholder = "Award/Certificate Title"
     acDiv.appendChild(acTitle)
 
     // Employer
     acEmployer = document.createElement("input")
+    acEmployer.addEventListener("input", outputJson)
     acEmployer.placeholder = "Award/Certificate Giver"
     acDiv.appendChild(acEmployer)
 
     // Date
     acDate = document.createElement("input")
+    acDate.addEventListener("input", outputJson)
     acDate.placeholder = "Award/Certificate Date"
     acDiv.appendChild(acDate)
 
     // Description
     acDescription = document.createElement("input")
+    acDescription.addEventListener("input", outputJson)
     acDescription.placeholder = "Award/Certificate Description"
     acDiv.appendChild(acDescription)
 
@@ -488,6 +518,7 @@ function createCertificate() {
 
     // Append the div back to the parent
     document.getElementById("certificates").appendChild(acDiv)
+    outputJson()
 }
 
 function createAward() {
@@ -496,26 +527,31 @@ function createAward() {
 
     // Title
     acTitle = document.createElement("input")
+    acTitle.addEventListener("input", outputJson)
     acTitle.placeholder = "Award/Certificate Title"
     acDiv.appendChild(acTitle)
 
     // Employer
     acEmployer = document.createElement("input")
+    acEmployer.addEventListener("input", outputJson)
     acEmployer.placeholder = "Award/Certificate Giver"
     acDiv.appendChild(acEmployer)
 
     // Date
     acDate = document.createElement("input")
+    acDate.addEventListener("input", outputJson)
     acDate.placeholder = "Award/Certificate Date"
     acDiv.appendChild(acDate)
 
     // Description
     acDescription = document.createElement("input")
+    acDescription.addEventListener("input", outputJson)
     acDescription.placeholder = "Award/Certificate Description"
     acDiv.appendChild(acDescription)
 
     // tags
     acTags = document.createElement("input")
+    acTags.addEventListener("input", outputJson)
     acTags.placeholder = "Award/Certificate Tags"
     acDiv.appendChild(acTags)
 
@@ -533,6 +569,7 @@ function createAward() {
 
     // Append the div back to the parent
     document.getElementById("awards").appendChild(acDiv)
+    outputJson()
 }
 function loadSettings() {
 
@@ -542,12 +579,14 @@ function loadSettings() {
     
     // Write name
     named = document.createElement("input")
+    named.addEventListener("input", outputJson)
     named.placeholder = "name"    
     named.value = data.settings.name
     settingsDiv.appendChild(named)
     
     // Write description
     description = document.createElement("input")
+    description.addEventListener("input", outputJson)
     description.placeholder = "description"
     description.value = data.settings.description
     settingsDiv.appendChild(description)
@@ -555,6 +594,7 @@ function loadSettings() {
     // Write profile image location
 
     profileImage = document.createElement("input")
+    profileImage.addEventListener("input", outputJson)
     profileImage.placeholder = "profileImage"
     profileImage.value = data.settings.profileImage
     settingsDiv.appendChild(profileImage)
@@ -562,7 +602,7 @@ function loadSettings() {
     // Write tags
 
     tags = document.createElement("input")
-
+    tags.addEventListener("input", outputJson)
     tags.placeholder = "tags"
     tags.value = data.settings.tags
     settingsDiv.appendChild(tags)
@@ -570,6 +610,7 @@ function loadSettings() {
     // Write social media
     for (let s in data.settings.socialMedia) {
         item = document.createElement("input")
+        item.addEventListener("input", outputJson)
         item.placeholder = s
         item.value = data.settings.socialMedia[s]
         settingsDiv.appendChild(item)
@@ -599,7 +640,6 @@ function loadWorkExperience(tag) {
 }
 
 function createWorkExperienceElement(object, tag) {
-    console.log("object")
 
     wEdiv = document.createElement("div")
     wEdiv.className = "workExperienceItem boxBorder"
@@ -619,6 +659,7 @@ function createWorkExperienceElement(object, tag) {
     wEDescriptionDiv.appendChild(wETitleLabel)
 
     wETitle = document.createElement("input")
+    wETitle.addEventListener("input", outputJson)
     wETitle.placeholder = "Job Title"
     wETitle.value = object.title
     wEDescriptionDiv.appendChild(wETitle)
@@ -629,6 +670,7 @@ function createWorkExperienceElement(object, tag) {
     wEDescriptionDiv.appendChild(wEEmployerLabel)
 
     wEEmployer = document.createElement("input")
+    wEEmployer.addEventListener("input", outputJson)
     wEEmployer.placeholder = "Employer"
     wEEmployer.value = object.employer
     wEDescriptionDiv.appendChild(wEEmployer)
@@ -639,6 +681,7 @@ function createWorkExperienceElement(object, tag) {
     wEDescriptionDiv.appendChild(wEDurationLabel)
 
     wEDuration = document.createElement("input")
+    wEDuration.addEventListener("input", outputJson)
     wEDuration.placeholder = "Job Description"
     wEDuration.value = object.duration
     wEDescriptionDiv.appendChild(wEDuration)
@@ -649,6 +692,7 @@ function createWorkExperienceElement(object, tag) {
     wEDescriptionDiv.appendChild(wEImgLabel)
 
     wEImgLocation = document.createElement("input")
+    wEImgLocation.addEventListener("input", outputJson)
     wEImgLocation.placeholder = "Employer Image Location"
     wEImgLocation.value = object.image
     wEDescriptionDiv.appendChild(wEImgLocation)
@@ -668,6 +712,7 @@ function createWorkExperienceElement(object, tag) {
         responsibilitiesDiv.appendChild(wEResponsibilityLabel)
 
         wEResponsibility = document.createElement("input")
+        wEResponsibility.addEventListener("input", outputJson)
         wEResponsibility.placeholder = "Responsibility"
         wEResponsibility.value = object.responsibilities[r].description
         responsibilitiesDiv.appendChild(wEResponsibility)
@@ -677,7 +722,7 @@ function createWorkExperienceElement(object, tag) {
         responsibilitiesDiv.appendChild(wETagsLabel)
 
         wETags = document.createElement("input")
-
+        wETags.addEventListener("input", outputJson)
         wETags.placeholder = "Tags"
         wETags.value = object.responsibilities[r].tags
         responsibilitiesDiv.appendChild(wETags)
@@ -749,6 +794,7 @@ function addResponsibility() {
     responsibilitiesDiv.appendChild(responsibilityLabel)
 
     responsibility = document.createElement("input")
+    responsibility.addEventListener("input", outputJson)
     responsibility.className = "responsibility"
     responsibility.placeholder = "Responsibility"
     responsibilitiesDiv.appendChild(responsibility)
@@ -758,6 +804,7 @@ function addResponsibility() {
     responsibilitiesDiv.appendChild(tagsLabel)
 
     tags = document.createElement("input")
+    tags.addEventListener("input", outputJson)
     tags.className = "tags"
     tags.placeholder = "Tags"
     responsibilitiesDiv.appendChild(tags)
@@ -789,21 +836,25 @@ function loadEducation(tag) {
         educationDiv.appendChild(educationItemDiv)
 
         educationTitle = document.createElement("input")
+        educationTitle.addEventListener("input", outputJson)
         educationTitle.placeholder = "University Name"
         educationTitle.value = data.education[i].institute
         educationItemDiv.appendChild(educationTitle)
 
         educationDates = document.createElement("input")
+        educationDates.addEventListener("input", outputJson)
         educationDates.placeholder = "Attendance Dates"
         educationDates.value = data.education[i].dates
         educationItemDiv.appendChild(educationDates)
 
         educationDegree = document.createElement("input")
+        educationDegree.addEventListener("input", outputJson)
         educationDegree.placeholder = "Degree"
         educationDegree.value = data.education[i].degree
         educationItemDiv.appendChild(educationDegree)
 
         educationImageSrc = document.createElement("input")
+        educationImageSrc.addEventListener("input", outputJson)
         educationImageSrc.placeholder = "University Image"
         educationImageSrc.value = data.education[i].image
         educationItemDiv.appendChild(educationImageSrc)
@@ -864,34 +915,40 @@ function createProjects(object, tag) {
 
     // Write the project title
     projectsTitle = document.createElement("input")
+    projectsTitle.addEventListener("input", outputJson)
     projectsTitle.value = object.title
     projectsTitle.placeholder = "Project Title"
     projectsDescriptionDiv.appendChild(projectsTitle)
 
     // Write the project description
     projectsDescription = document.createElement("input")
+    projectsDescription.addEventListener("input", outputJson)
     projectsDescription.value = object.description
     projectsDescription.placeholder = "Project Description"
     projectsDescriptionDiv.appendChild(projectsDescription)
 
     // Write what tools were used on the project
     projectsTools = document.createElement("input")
+    projectsTools.addEventListener("input", outputJson)
     projectsTools.value = "Utilized: " + object.tools
     projectsTools.placeholder = "Project Tools"
     projectsDescriptionDiv.appendChild(projectsTools)
 
     // Projects Image src
     projectsImageSource = document.createElement("input")
+    projectsImageSource.addEventListener("input", outputJson)
     projectsImageSource.value = object.projectImage
     projectsImageSource.placeholder = "Project Image Source"
     projectsDescriptionDiv.appendChild(projectsImageSource)
 
     projectsLink = document.createElement("input")
+    projectsLink.addEventListener("input", outputJson)
     projectsLink.value = object.projectLink
     projectsLink.placeholder = "Project Link"
     projectsDescriptionDiv.appendChild(projectsLink)
 
     projectTags = document.createElement("input")
+    projectTags.addEventListener("input", outputJson)
     projectTags.value = object.tags
     projectTags.placeholder = "Project Tags"
     projectsDescriptionDiv.appendChild(projectTags)
@@ -936,24 +993,27 @@ function createWritings(object) {
 
      // Write the article title
     writingsTitle = document.createElement("input")
+    writingsTitle.addEventListener("input", outputJson)
     writingsTitle.placeholder = "Writing Title"
     writingsTitle.value = object.title
     writingsDiv.appendChild(writingsTitle)
 
     // Write the article description
     writingDescription = document.createElement("input")
+    writingDescription.addEventListener("input", outputJson)
     writingDescription.placeholder = "Writing Description"
     writingDescription.value = object.description
     writingsDiv.appendChild(writingDescription)
 
     writingTags = document.createElement("input")
+    writingTags.addEventListener("input", outputJson)
     writingTags.placeholder = "Writing Tags"
     writingTags.value = object.tags
     // writingTags.value = writingTags.innerText.split(',').join(', ')
     writingsDiv.appendChild(writingTags)
 
     writingLink = document.createElement("input")
-
+    writingLink.addEventListener("input", outputJson)
     writingLink.placeholder = "Link"
     writingLink.value = object.link 
     writingsDiv.appendChild(writingLink)
@@ -1003,30 +1063,35 @@ function createAwardOrCertificate(object, parentDiv) {
 
   // Title
   acTitle = document.createElement("input")
+  acTitle.addEventListener("input", outputJson)
   acTitle.value = object.title
   acTitle.placeholder = "Award/Certificate Title"
   acDiv.appendChild(acTitle)
 
   // Employer
   acEmployer = document.createElement("input")
+  acEmployer.addEventListener("input", outputJson)
   acEmployer.value = object.employer
   acEmployer.placeholder = "Award/Certificate Giver"
   acDiv.appendChild(acEmployer)
 
   // Date
   acDate = document.createElement("input")
+  acDate.addEventListener("input", outputJson)
   acDate.value = object.date
   acDate.placeholder = "Award/Certificate Date"
   acDiv.appendChild(acDate)
 
   // Description
   acDescription = document.createElement("input")
+  acDescription.addEventListener("input", outputJson)
   acDescription.value = object.description
   acDescription.placeholder = "Award/Certificate Description"
   acDiv.appendChild(acDescription)
 
   // tags
   acTags = document.createElement("input")
+  acTags.addEventListener("input", outputJson)
   acTags.value = object.tags
   acTags.placeholder = "Award/Certificate Tags"
   acDiv.appendChild(acTags)
@@ -1095,18 +1160,21 @@ function createSkill(object, parentTag) {
 
     // Write the skill title
     skillTitle = document.createElement("input")
+    skillTitle.addEventListener("input", outputJson)
     skillTitle.value = object.title
     skillTitle.placeholder = "Skill Title"
     skillDiv.appendChild(skillTitle)
 
     // Write the skill image location
     skillImageLocation = document.createElement("input")
+    skillImageLocation.addEventListener("input", outputJson)
     skillImageLocation.value = object.image
     skillImageLocation.placeholder = "Skill Image Location"
     skillDiv.appendChild(skillImageLocation)
 
     // Write the skill tag
     skillImageTag = document.createElement("input")
+    skillImageTag.addEventListener("input", outputJson)
     skillImageTag.value = object.tags
     skillImageTag.placeholder = "Skill Tags"
     skillDiv.appendChild(skillImageTag)
@@ -1288,7 +1356,6 @@ function outputJson() {
 
         for (let a of advancedSkills) {
             var inputs = a.getElementsByTagName("input")
-            console.log(inputs)
             json += '"' + adCounter + '": {'
             json += '"title":' + '"' + inputs[0].value + '",'
             json += '"image":' + '"' + inputs[1].value + '",'
@@ -1331,7 +1398,6 @@ function outputJson() {
 
         for (let a of adequateSkills) {
             var inputs = a.getElementsByTagName("input")
-            console.log(inputs)
             json += '"' + eCounter + '": {'
             json += '"title":' + '"' + inputs[0].value + '",'
             json += '"image":' + '"' + inputs[1].value + '",'
@@ -1360,7 +1426,6 @@ function outputJson() {
         
         for (let a of awards) {
             var inputs = a.getElementsByTagName("input")
-            console.log(inputs)
             json += '"' + awCounter + '": {'
             json += '"title":' + '"' + inputs[0].value + '",'
             json += '"employer":' + '"' + inputs[1].value + '",'
@@ -1386,7 +1451,6 @@ function outputJson() {
         
         for (let c of cert) {
             var inputs = c.getElementsByTagName("input")
-            console.log(inputs)
             json += '"' + cCounter + '": {'
             json += '"title":' + '"' + inputs[0].value + '",'
             json += '"employer":' + '"' + inputs[1].value + '",'
@@ -1411,5 +1475,5 @@ function outputJson() {
     json += "}"
 
     document.getElementById("jsonOutput").value = json
-    console.log(json)
+    console.log("json updated")
 }

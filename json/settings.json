@@ -38,18 +38,21 @@
         "0": {
           "description": "Act as the primary representative on behalf of the Foundation to coordinate partnerships and new opportunities",
           "tags": [
+            "All",
             "Community Management"
           ]
         },
         "1": {
           "description": "Moderating and managing a community of around 6,000 users",
           "tags": [
+            "All",
             "Community Management"
           ]
         },
         "2": {
           "description": "Complete assigned special projects",
           "tags": [
+            "All",
             "Web Developement"
           ]
         }
@@ -79,12 +82,6 @@
       "institute": "University of Colorado at Boulder",
       "dates": "2015-2018",
       "degree": "Bachelor's of Psychology",
-      "image": "img/education/cuboulder.png"
-    },
-    "1": {
-      "institute": "Arapahoe Community College",
-      "dates": "2014-2015",
-      "degree": "Associaties",
       "image": "img/education/cuboulder.png"
     }
   },
