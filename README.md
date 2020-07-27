@@ -1,6 +1,8 @@
 
 # Motley
 
+![Alt text](/img/default/motley.jpg)
+
 If you are an individual with a motley selection of skills and experience, it may be difficult to narrow your resume for employers.  Motley offers you the unique ability to create a full resume then narrow what employers see based on a tagging system.  
 
 Motley was intentionally made with minimal styling so you can customize it to your tastes as needed.  Additionally, the editor.html allows you to make rapid changes and outputs your resume to a JSON file so you can easily update your resume.
