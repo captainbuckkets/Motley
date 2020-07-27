@@ -38,7 +38,7 @@ a:visited { color: var(--primaryColor)}
 }
 
 .subheading {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-top: 1vh;
 }
 
@@ -122,6 +122,10 @@ a:visited { color: var(--primaryColor)}
     z-index: 1;
     background-color: var(--secondaryColor);
     text-align: center;
+}
+
+.descriptionParent {
+    padding: 1vw;
 }
 
 .sidebarImage {

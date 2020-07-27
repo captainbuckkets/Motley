@@ -86,11 +86,16 @@ function loadSidebar(tag) {
     userName.innerText = data.settings.name
     sidebar.appendChild(userName)
 
+    // User description div
+    userSummaryDiv = document.createElement("div")
+    userSummaryDiv.className = "descriptionParent"
+    sidebar.appendChild(userSummaryDiv)
+
     // User description
     userSummary = document.createElement("p")
     userSummary.className = "description"
     userSummary.innerText = data.settings.description
-    sidebar.appendChild(userSummary)
+    userSummaryDiv.appendChild(userSummary)
 
     // Page anchors
     // Might use settings to disable these things.  Unsure

@@ -1,242 +1,215 @@
 {
-  "settings":{
-     "name":"Jack Day",
-     "description":"This is my description",
-     "profileImage":"img/portrait.jpg",
-     "tags":[
-        "Community Management",
-        "Web Developement",
-        "Cryptocurrency",
-        "Financial Analysis",
-        "All"
-     ],
-     "socialMedia":{
-        "behance":"",
-        "facebook":"",
-        "github":"https://github.com/captainbuckkets",
-        "instagram":"",
-        "linkedin":"https://www.linkedin.com/in/jackdday/",
-        "reddit":"",
-        "soundcloud":"",
-        "telegram":"",
-        "twitch":"",
-        "twitter":"",
-        "youtube":""
-     }
-  },
-  "workExperience":{
-     "0":{
-        "title":"Community Manager/Junior PR Manager",
-        "tags":[
-           "Community Management",
-           "All"
-        ],
-        "image":"img/workExperience/peercoin.png",
-        "employer":"The Peercoin Foundation",
-        "duration":"August 2018 to Current",
-        "responsibilities":{
-           "0":{
-              "description":"Act as the primary representative on behalf of the Foundation to coordinate partnerships and new opportunities",
-              "tags":[
-                 "All",
-                 "Community Management"
-              ]
-           },
-           "1":{
-              "description":"Moderating and managing a community of around 6,000 users",
-              "tags":[
-                 "All",
-                 "Community Management"
-              ]
-           },
-           "2":{
-              "description":"Complete assigned special projects",
-              "tags":[
-                 "All",
-                 "Web Developement"
-              ]
-           }
-        }
-     },
-     "1":{
-        "title":"Student Computer Technician",
-        "tags":[
-           "Customer Service",
-           "All"
-        ],
-        "image":"img/education/cuboulder.png",
-        "employer":"Office of Information Technology at the University of Colorado Boulder",
-        "duration":"August 2016 to May 2018",
-        "responsibilities":{
-           "0":{
-              "description":"Directed client's relations to IT and campus services",
-              "tags":[
-                 "All",
-                 "Customer Service"
-              ]
-           }
-        }
-     }
-  },
-  "education":{
-     "0":{
-        "institute":"University of Colorado at Boulder",
-        "dates":"2015-2018",
-        "degree":"Bachelor's of Psychology",
-        "image":"img/education/cuboulder.png"
-     },
-     "1":{
-        "institute":"Arapahoe Community College",
-        "dates":"2014-2015",
-        "degree":"Associaties",
-        "image":"img/education/cuboulder.png"
-     }
-  },
-  "projects":{
-     "0":{
-        "title":"Agave Wallet",
-        "description":"Agave Wallet is a second layer solution for agnostic cross-chain asset managment",
-        "tools":"React, Javascript, Sass, Go, HTML, CSS, Adobe Illustrator, Adobe Photoshop",
-        "tags":[
-           "All",
-           "Web Development",
-           "Community Management"
-        ],
-        "projectImage":"img/projects/agave.png",
-        "projectLink":"https://github.com/Agave-Wallet/agave"
-     },
-     "1":{
-        "title":"Peercoin.net Redesign",
-        "description":"Carried out website prototype to deployment in a four week sprint (Dec. 2018-Jan. 2019).  Was additionally responsible for the animations visible from the home page.",
-        "tools":"HTML, CSS, Javascript, Adobe Animate, Adobe Indesign, Adobe Illustrator, Adobe Photoshop",
-        "tags":[
-           "All",
-           "Web Development",
-           "Community Management"
-        ],
-        "projectImage":"img/workExperience/peercoin.png",
-        "projectLink":"https://www.peercoin.net/"
-     }
-  },
-  "writings":{
-     "0":{
-        "title":"The Next Step for Esports Quant Modeling",
-        "description":"This is an article about the next steps for Esports betting modeling and my experrience after completing one of the only models for DOTA 2 predictive betting.",
-        "link":"https://medium.com/@buckkets/the-next-step-for-esports-quant-modeling-e6bb76f3b9c7?source=friends_link&sk=f3bbf48f0246012409b0dc52108f979f",
-        "tags":[
-           "All",
-           "Community Management",
-           "Financial Analysis"
-        ]
-     },
-     "1":{
-        "title":"A Retrospective Look at ENRON’s Price Chart: A Technical Analysis Viewpoint",
-        "description":"This is a historical look at ENRON's stock price using widely available technical analysis indicators to prove that the price collapse was not only visible to common traders but that financial damages could have largely been avoided if fundamental analysis was discounted.",
-        "link":"https://medium.com/@buckkets/retrospective-look-at-enrons-price-chart-a-technical-analysis-viewpoint-28f9677d8c88?source=friends_link&sk=b9e7b43649bb3e86e01c2ad41ae32278",
-        "tags":[
-           "All",
-           "Community Management",
-           "Finance Analysis"
-        ]
-     }
-  },
-  "skills":{
-     "advanced":{
-        "0":{
-           "title":"Adobe Illustrator",
-           "image":"img/skills/illustrator.png",
-           "tags":[
-              "All",
-              "Graphic Design"
-           ]
-        },
-        "1":{
-           "title":"Adobe Photoshop",
-           "image":"img/skills/photoshop.png",
-           "tags":[
-              "All",
-              "Graphic Design"
-           ]
-        },
-        "2":{
-           "title":"Adobe InDesign",
-           "image":"img/skills/indesign.png",
-           "tags":[
-              "All",
-              "Graphic Design",
-              "Web Design"
-           ]
-        }
-     },
-     "competent":{
-        "0":{
-           "title":"AutoCAD",
-           "image":"img/skills/autocad.png",
-           "tags":[
-              "All",
-              "Community Management"
-           ]
-        },
-        "1":{
-           "title":"ServiceNow",
-           "image":"img/skills/servicenow.png",
-           "tags":[
-              "Community Management",
-              "All"
-           ]
-        },
-        "2":{
-           "title":"Nginx",
-           "image":"img/skills/nginx.jpg",
-           "tags":[
-              "Community Management",
-              "All"
-           ]
-        }
-     },
-     "entryLevel":{
-        "0":{
-           "title":"Amazon Web Services",
-           "image":"img/skills/aws.png",
-           "tags":[
-              "Community Management",
-              "All"
-           ]
-        },
-        "1":{
-           "title":"Python",
-           "image":"img/skills/python.png",
-           "tags":[
-              "Community Management",
-              "All"
-           ]
-        }
-     }
-  },
-  "awardsAndCertificates":{
-     "awards":{
-        "0":{
-           "title":"Jefferson County Executive Internship",
-           "employer":"Jefferson County",
-           "description":"The Executive High School Internship program will provide high school seniors who are accepted into the program the opportunity to gain exposure to a career field they hope to pursue after graduation. The interns complete 100 non-paid hours at their internship site, complete weekly summaries and hourly reports, obtain sponsor approval of time sheets every four weeks and complete the final project as assigned by the Program Director. Jefferson County Public Schools insurance covers interns while on site at their internship location. Interns receive one-half academic credit for the internship and one-half credit for the workplace readiness as a letter grade on their transcript.",
-           "date":"2014",
-           "tags":[
-              "Community Management",
-              "All"
-           ]
-        }
-     },
-     "certificates":{
-        "0":{
-           "title":"AutoCAD 2018 Essential Training",
-           "employer":"Lynda",
-           "description":"LinkedIn/Lynda AutoCAD Essentials Course",
-           "date":"January 2020",
-           "tags":[
-              "Community Management",
-              "All"
-           ]
-        }
-     }
-  }
+	"settings": {
+		"name": "Audrey Hepburn",
+		"description": "Audrey Hepburn was a British actress and humanitarian. Recognised as a film and fashion icon, she was ranked by the American Film Institute as the third-greatest female screen legend in Golden Age Hollywood, and was inducted into the International Best Dressed List Hall of Fame.",
+		"profileImage": "img/portrait.jpg",
+		"tags": ["Acting", "Modeling", "Broadway", "All"],
+		"socialMedia": {
+			"behance": "",
+			"facebook": "https://www.facebook.com/AudreyHepburnFans/",
+			"github": "",
+			"instagram": "https://www.instagram.com/livelikeaudreyhepburn/?hl=en",
+			"linkedin": "",
+			"reddit": "",
+			"soundcloud": "",
+			"telegram": "",
+			"twitch": "",
+			"twitter": "https://twitter.com/rareaudrey",
+			"youtube": ""
+		}
+	},
+	"workExperience": {
+		"0": {
+			"title": "Lead Actress",
+			"employer": "Charade",
+			"duration": "1965-1966",
+			"image": "img/workExperience/charade.jpg",
+			"tags": ["Acting", " All"],
+			"responsibilities": {
+				"0": {
+					"description": "Performed the role of Regina Lampert",
+					"tags": ["Acting", " All"]
+				}
+			}
+		},
+		"1": {
+			"title": "Lead Actress",
+			"employer": "Breakfast at Tiffany's",
+			"duration": "1960-1961",
+			"image": "img/workExperience/breakfastAtTiffanys.jpg",
+			"tags": ["Acting", " All"],
+			"responsibilities": {
+				"0": {
+					"description": "Performed the role of Holly Golightly",
+					"tags": ["Acting", " All"]
+				}
+			}
+		},
+		"2": {
+			"title": "Lead Actress",
+			"employer": "Roman Holiday",
+			"duration": "1952-1953",
+			"image": "img/workExperience/romanHoliday.jpg",
+			"tags": ["Acting", " All"],
+			"responsibilities": {
+				"0": {
+					"description": "Performed the role of Princess Ann",
+					"tags": ["Acting", " All"]
+				}
+			}
+		},
+		"3": {
+			"title": "Lead Actress",
+			"employer": "Ondine",
+			"duration": "1953-1954",
+			"image": "img/workExperience/ondine.jpg",
+			"tags": ["Broadway", " All"],
+			"responsibilities": {
+				"0": {
+					"description": "Performed the role of Ordine",
+					"tags": ["Broadway", " All"]
+				}
+			}
+		},
+		"4": {
+			"title": "Lead Actress",
+			"employer": "Gigi",
+			"duration": "1950-1951",
+			"image": "img/workExperience/gigi.jpg",
+			"tags": ["All", " Broadway"],
+			"responsibilities": {
+				"0": {
+					"description": "Performed the role of Gigi",
+					"tags": ["All", " Broadway"]
+				}
+			}
+		},
+		"5": {
+			"title": "Lead Actress",
+			"employer": "How to Steal a Million",
+			"duration": "1965-1966",
+			"image": "img/workExperience/howToStealAMillion.jpg",
+			"tags": ["All", " Acting"],
+			"responsibilities": {
+				"0": {
+					"description": "Performed the role of Nicole Bonnet",
+					"tags": ["All", " Acting"]
+				}
+			}
+		},
+		"6": {
+			"title": "Lead Actress",
+			"employer": "My Fair Lady",
+			"duration": "1963-1964",
+			"image": "img/workExperience/myFairLady.jpg",
+			"tags": ["All", " Acting", " Broadway"],
+			"responsibilities": {
+				"0": {
+					"description": "Performed the role of Eliza Doolittle",
+					"tags": ["All", " Acting", " Broadway"]
+				}
+			}
+		}
+	},
+	"education": {
+		"0": {
+			"institute": "Arnhem Conservatory",
+			"dates": "1939 to 1945",
+			"degree": "Ballet",
+			"image": "img/education/arnhem.jpg"
+		}
+	},
+	"projects": {
+		"0": {
+			"title": "Goodwill Ambassador",
+			"description": "In 1988, Audrey became a Goodwill Ambassador for UNICEF and she dedicated the rest of her life to helping impoverished children in Africa, Asia and Latin America by working in the field, nursing sick children and spreading awareness of the conditions of these nations",
+			"tools": "Medical, Fundraising",
+			"projectImage": "img/projects/unicef.png",
+			"projectLink": "https://www.theedgesusu.co.uk/features/2017/04/10/audrey-hepburn-from-beauty-to-humanitarian/",
+			"tags": ["All", ""]
+		}
+	},
+	"writings": {
+		"0": {
+			"title": "Audrey Hepburn",
+			"description": "The most ambitious and personal account ever written about Hollywood's most gracious star-Audrey Hepburn by Barry Paris is a moving portrayal (The New York Times Book Review) that truly captures the woman who captured our hearts...  With the insights of family and friends who never before spoke to a Hepburn biographer-and never-before-published photographs-Paris has created an in-depth portrait of the actress, from her childhood in Nazi-occupied Europe, through her legendary career, and into her UN ambassadorship.",
+			"link": "https://www.amazon.com/Audrey-Hepburn-Barry-Paris/dp/0425182126",
+			"tags": ["All", "Acting", " Broadway"]
+		},
+		"1": {
+			"title": "Audrey Hepburn: Portraits of an Icon",
+			"description": "A rich collection of iconic and rare portraits of one of the world’s most photographed women, international film legend Audrey Hepburn. During her lifetime, Belgian-born British actress Audrey Hepburn (1929–1993), star of such films as Roman Holiday, Sabrina, Funny Face, Breakfast at Tiffany’s, My Fair Lady, Charade, and Two for the Road, was recognized around the world. Two decades after her death, Hepburn remains one of the most celebrated actresses of all time, inspiring new generations of admirers.  Here, Hepburn’s career is charted from her early years in London as a student of ballet and a performer on the West End stage to her Hollywood heyday to her final years as a special ambassador for the United Nations Children’s Fund (UNICEF).",
+			"link": "https://www.amazon.com/Audrey-Hepburn-Portraits-Terence-Pepper/dp/0847847004/ref=pd_lpo_14_t_1/144-9812605-4934429?_encoding=UTF8&pd_rd_i=0847847004&pd_rd_r=e676c8f3-1cb6-43f1-b1d4-fe31b13ab7e0&pd_rd_w=jSxip&pd_rd_wg=39oAP&pf_rd_p=7b36d496-f366-4631-94d3-61b87b52511b&pf_rd_r=0KQG6EAXCVP4GXMJR1KZ&psc=1&refRID=0KQG6EAXCVP4GXMJR1KZ",
+			"tags": ["All", "Acting", "Broadway"]
+		}
+	},
+	"skills": {
+		"advanced": {
+			"0": {
+				"title": "Ballet",
+				"image": "img/skills/ballerina.png",
+				"tags": ["All"]
+			},
+			"1": {
+				"title": "Acting",
+				"image": "img/skills/acting.jpg",
+				"tags": ["All", " Acting"]
+			},
+			"2": {
+				"title": "Singing",
+				"image": "img/skills/singing.png",
+				"tags": ["All", " Acting", " Broadway"]
+			}
+		},
+		"competent": {
+			"0": {
+				"title": "Pasta Making",
+				"image": "img/skills/pasta.jpg",
+				"tags": ["All"]
+			},
+			"1": {
+				"title": "Line Memorization",
+				"image": "img/skills/linereading.jpg",
+				"tags": ["All", " Acting", " Broadway"]
+			}
+		},
+		"entryLevel": {
+			"0": {
+				"title": "Art Forgery",
+				"image": "img/skills/forgery.png",
+				"tags": ["All", " Acting"]
+			},
+			"1": {
+				"title": "Sight Reading",
+				"image": "img/skills/musicnote.jpg",
+				"tags": ["All", " Broadway"]
+			}
+		}
+	},
+	"awardsAndCertificates": {
+		"awards": {
+			"0": {
+				"title": "Best Actress",
+				"employer": "The Oscars",
+				"date": "1954",
+				"description": "The Academy Award for Best Actress is an award presented annually by the Academy of Motion Picture Arts and Sciences (AMPAS). It is given in honor of an actress who has delivered an outstanding performance in a leading role while working within the film industry. The award is traditionally presented by the previous year's Best Actor winner. ",
+				"tags": ["Acting", "All"]
+			},
+			"1": {
+				"title": "Best British Actress",
+				"employer": "British Academy of Film and Television Arts",
+				"date": "1965",
+				"description": "The British Academy Film Awards or BAFTA Film Awards are presented in an annual award show hosted by the British Academy of Film and Television Arts (BAFTA) to honour the best British and international contributions to film. The ceremonies were initially held at the flagship Odeon cinema in Leicester Square in London, before being held at the Royal Opera House from 2008 to 2016. Since 2017, the ceremony has been held at the Royal Albert Hall in London. ",
+				"tags": ["All", " Acting"]
+			},
+			"2": {
+				"title": "Best Actress in a Play",
+				"employer": "The Antoinette Perry Awards for Excellence in Theatre",
+				"date": "1954",
+				"description": "The Antoinette Perry Awards for Excellence in Theatre, more commonly known as the Tony Awards, recognize achievement in live American theatre, and are presented by the American Theatre Wing and The Broadway League.",
+				"tags": ["All", " Broadway"]
+			}
+		},
+		"certificates": {}
+	}
 }
