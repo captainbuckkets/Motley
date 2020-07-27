@@ -266,9 +266,10 @@ a:visited { color: var(--primaryColor)}
 }
 
 .projectsItemImage {
-    max-width: 6vw;
-    height: 100%;
+    max-width: 5vw;
     margin: auto 1vw;
+    height: 100%;
+    width: 300px;
 }
 
 .projectDescriptionDiv {
