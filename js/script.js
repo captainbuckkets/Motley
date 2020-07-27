@@ -4,18 +4,19 @@ fetch("json/settings.json")
   .then(data => initJSON(data))
 
 function initJSON(data) {
-    console.log(data)
-
+    // Set data as a global variable
     window.data = data
-
+    // Set our parent div
     var projectsParent = document.getElementById("workOptions")
 
     // Set the page title
     document.getElementsByTagName("title")[0].innerText = data.settings.name
-
+    // Set username
     document.getElementById("userName").innerText = data.settings.name
+    // Set user description
     document.getElementById("userDescription").innerText = data.settings.description
 
+    // Make our buttons based on the tags
     let counter = 1
 
     for (let i in data.settings.tags) {
@@ -29,9 +30,7 @@ function makeAreaButton(title, parent, counter) {
     var button = document.createElement("div")
     button.className = "buttonClass buttonColor" + counter
     button.innerText = title
-
     button.addEventListener("click", loadResume)
-
     parent.appendChild(button)
 }
 
@@ -132,21 +131,6 @@ function loadSidebar(tag) {
                 socialAnchor.appendChild(social)
         }
     }
-
-    // Download Resume Button
-    // resume = document.createElement("div")
-    // resume.className = "resumeButton"
-    // sidebar.appendChild(resume)
-
-    // resumeImage = document.createElement("img")
-    // resumeImage.src = "img/default/download.png"
-    // resumeImage.className = "resumeImage"
-    // resume.appendChild(resumeImage)
-
-    // resumeText = document.createElement("h3")
-    // resumeText.innerText = "Download Resume"
-    // resume.appendChild(resumeText)
-    
 }
 
 // This can be simplified
@@ -399,10 +383,10 @@ function loadSkills(tag) {
         createSkill(data.skills.advanced[i], "advanced")
       }
     }
-    for (let i in data.skills.adequate) {
-      if (data.skills.adequate[i].tags.includes(tag)) {
-        //console.log(skills.adequate[i])
-        createSkill(data.skills.adequate[i], "adequate")
+    for (let i in data.skills.competent) {
+      if (data.skills.competent[i].tags.includes(tag)) {
+        //console.log(skills.competent[i])
+        createSkill(data.skills.competent[i], "competent")
       }
     }
     for (let i in data.skills.entryLevel) {
