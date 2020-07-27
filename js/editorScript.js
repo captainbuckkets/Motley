@@ -431,13 +431,13 @@ function createWorkExperience(object, tag) {
     // Duration Label
     workDurationLabel = document.createElement("label")
     workDurationLabel.className = "labelClass"
-    workDurationLabel.innerText = "Duration"
+    workDurationLabel.innerText = "Job Duration"
     workDescriptionDiv.appendChild(workDurationLabel)
 
     // Duration
     workDuration = document.createElement("input")
     workDuration.addEventListener("input", outputJson)
-    workDuration.placeholder = "Job Description"
+    workDuration.placeholder = "Job Duration"
     workDuration.value = object.duration
     workDescriptionDiv.appendChild(workDuration)
 
