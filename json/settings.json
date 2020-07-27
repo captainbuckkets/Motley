@@ -3,7 +3,7 @@
 		"name": "Audrey Hepburn",
 		"description": "Audrey Hepburn was a British actress and humanitarian. Recognised as a film and fashion icon, she was ranked by the American Film Institute as the third-greatest female screen legend in Golden Age Hollywood, and was inducted into the International Best Dressed List Hall of Fame.",
 		"profileImage": "img/portrait.jpg",
-		"tags": ["Acting", "Modeling", "Broadway", "All"],
+		"tags": ["Acting", "Broadway", "All"],
 		"socialMedia": {
 			"behance": "",
 			"facebook": "https://www.facebook.com/AudreyHepburnFans/",
