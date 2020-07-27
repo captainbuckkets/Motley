@@ -23,6 +23,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {color: var(--primaryColor)}
 a:visited { color: var(--primaryColor)}
 
 /* Some basic stuff */
@@ -301,13 +302,16 @@ a:visited { color: var(--primaryColor)}
 /* bottom related skills box placement and parent on CM*/
 
 #advanced {
+    display: none;
     grid-column: 1 / 2;}
 
 #adequate {
+    display: none;
     grid-column: 2 / 3;
 }
 
 #entryLevel {
+    display: none;
     grid-column: 3 / 3;
 }
 

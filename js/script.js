@@ -44,17 +44,31 @@ function loadResume() {
     // Load the general websity div things
     loadSidebar(tag)
     // Load the Related Work card
-    loadWorkExperience(tag)
+    for (w in data.workExperience) {
+        if (data.workExperience[w].tags.includes(tag)) {
+            loadWorkExperience(tag)
+            break
+        }
+    }
     // Load the Education card
     loadEducation(tag)
     // Load the Projects card
-    loadProjects(tag)
+    for (p in data.projects) {
+        if (data.projects[p].tags.includes(tag)) {
+            loadProjects(tag)
+            break
+        }
+    }
     // Load the writings card
-    loadWritings(tag)
-    // Load the awards card
-    loadAwardsAndCertificates(tag)
-    // Load the skills card
+    for (w in data.writings) {
+        if (data.writings[p].tags.includes(tag)) {
+            loadWritings(tag)
+            break
+        }
+    }
     loadSkills(tag)
+    loadAwardsAndCertificates(tag)
+    
 }
 
 function loadSidebar(tag) {
@@ -151,7 +165,6 @@ function loadWorkExperience(tag) {
 }
 
 function createWorkExperienceElement(object, tag) {
-    //console.log("object")
 
     wEdiv = document.createElement("div")
     wEdiv.className = "workExperienceItem boxBorder"
@@ -324,21 +337,29 @@ function createWritings(object) {
 }
 
 function loadAwardsAndCertificates(tag) {
-    document.getElementById("awardsAndCertificates").style.display = "block";
 
-    for (let a in data.awardsAndCertificates.awards) {
-        console.log("a", data.awardsAndCertificates.awards[a])
-        if (data.awardsAndCertificates.awards[a].tags.includes(tag)) {
-            createAwardOrCertificate(data.awardsAndCertificates.awards[a], "awards")
-        }
-    }
-
-    for (let c in data.awardsAndCertificates.certificates) {
-        console.log("c", data.awardsAndCertificates.certificates[c])
+    // Load the certificates card
+    for (c in data.awardsAndCertificates.certificates) {
         if (data.awardsAndCertificates.certificates[c].tags.includes(tag)) {
-            createAwardOrCertificate(data.awardsAndCertificates.certificates[c], "certificates")
+            document.getElementById("awardsAndCertificates").style.display = "block";
+            for (let c in data.awardsAndCertificates.certificates) {
+                if (data.awardsAndCertificates.certificates[c].tags.includes(tag)) {
+                    createAwardOrCertificate(data.awardsAndCertificates.certificates[c], "certificates")
+                }
+            }
         }
-    }
+    } 
+    // Load the awards card
+    for (a in data.awardsAndCertificates.awards) {
+        if (data.awardsAndCertificates.awards[a].tags.includes(tag)) {
+            document.getElementById("awardsAndCertificates").style.display = "block";
+            for (let a in data.awardsAndCertificates.awards) {
+                if (data.awardsAndCertificates.awards[a].tags.includes(tag)) {
+                    createAwardOrCertificate(data.awardsAndCertificates.awards[a], "awards")
+                }
+            }
+        }
+    }   
 }
 
 function createAwardOrCertificate(object, parentDiv) {
@@ -375,24 +396,26 @@ function createAwardOrCertificate(object, parentDiv) {
 }
 
 function loadSkills(tag) {
-    document.getElementById("skills").style.display = "block";
 
-    for (let i in data.skills.advanced) {
-      if (data.skills.advanced[i].tags.includes(tag)) {
-        //console.log(skills.advanced[i])
-        createSkill(data.skills.advanced[i], "advanced")
+    for (let a in data.skills.advanced) {
+      if (data.skills.advanced[a].tags.includes(tag)) {
+        document.getElementById("skills").style.display = "block";
+        document.getElementById("advanced").style.display = "block"
+        createSkill(data.skills.advanced[a], "advanced")
       }
     }
-    for (let i in data.skills.competent) {
-      if (data.skills.competent[i].tags.includes(tag)) {
-        //console.log(skills.competent[i])
-        createSkill(data.skills.competent[i], "competent")
+    for (let c in data.skills.competent) {
+      if (data.skills.competent[c].tags.includes(tag)) {
+        document.getElementById("skills").style.display = "block";
+        document.getElementById("competent").style.display = "block"
+        createSkill(data.skills.competent[c], "competent")
       }
     }
-    for (let i in data.skills.entryLevel) {
-      if (data.skills.entryLevel[i].tags.includes(tag)) {
-        //console.log(skills.entryLevel[i])
-        createSkill(data.skills.entryLevel[i], "entryLevel")
+    for (let e in data.skills.entryLevel) {
+      if (data.skills.entryLevel[e].tags.includes(tag)) {
+        document.getElementById("skills").style.display = "block";
+        document.getElementById("entryLevel").style.display = "block"
+        createSkill(data.skills.entryLevel[e], "entryLevel")
       }
     }
 }
