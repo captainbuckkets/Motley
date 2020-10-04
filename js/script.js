@@ -103,11 +103,16 @@ function loadSidebar(tag) {
     pageNav.className = "pageNav"
     sidebar.appendChild(pageNav)
 
-        workExperienceItem = document.createElement("a")
-        workExperienceItem.className = "pageNavItem"
-        workExperienceItem.innerText = "Work Experience"
-        workExperienceItem.href = "#workExperience"
-        pageNav.appendChild(workExperienceItem)
+        for (w in data.workExperience) {
+            if (data.workExperience[w].tags.includes(tag)) {
+                workExperienceItem = document.createElement("a")
+                workExperienceItem.className = "pageNavItem"
+                workExperienceItem.innerText = "Work Experience"
+                workExperienceItem.href = "#workExperience"
+                pageNav.appendChild(workExperienceItem)
+                break
+            }
+        }
 
         educationItem = document.createElement("a")
         educationItem.className = "pageNavItem"
@@ -115,23 +120,55 @@ function loadSidebar(tag) {
         educationItem.href = "#education"
         pageNav.appendChild(educationItem)
 
-        projectsItem = document.createElement("a")
-        projectsItem.className = "pageNavItem"
-        projectsItem.innerText = "Projects"
-        projectsItem.href = "#projects"
-        pageNav.appendChild(projectsItem)
+        for (p in data.projects) {
+            if (data.projects[p].tags.includes(tag)) {
+                projectsItem = document.createElement("a")
+                projectsItem.className = "pageNavItem"
+                projectsItem.innerText = "Projects"
+                projectsItem.href = "#projects"
+                pageNav.appendChild(projectsItem)
+                break
+            }
+        }
 
-        writingsItem = document.createElement("a")
-        writingsItem.className = "pageNavItem"
-        writingsItem.innerText = "Writings"
-        writingsItem.href = "#writings"
-        pageNav.appendChild(writingsItem)
+        for (w in data.writings) {
+            if (data.writings[p].tags.includes(tag)) {
+                writingsItem = document.createElement("a")
+                writingsItem.className = "pageNavItem"
+                writingsItem.innerText = "Writings"
+                writingsItem.href = "#writings"
+                pageNav.appendChild(writingsItem)
+                break
+            }
+        }
 
         skillsItem = document.createElement("a")
         skillsItem.className = "pageNavItem"
         skillsItem.innerText = "Skills"
         skillsItem.href = "#skills"
         pageNav.appendChild(skillsItem)
+
+        for (c in data.awardsAndCertificates.certificates) {
+            if (data.awardsAndCertificates.certificates[c].tags.includes(tag)) {
+                awardsItem = document.createElement("a")
+                awardsItem.className = "pageNavItem"
+                awardsItem.innerText = "Certificates"
+                awardsItem.href = "#certificates"
+                pageNav.appendChild(awardsItem)
+                break
+            }
+        } 
+
+        for (a in data.awardsAndCertificates.awards) {
+            if (data.awardsAndCertificates.awards[a].tags.includes(tag)) {
+                certificateItem = document.createElement("a")
+                certificateItem.className = "pageNavItem"
+                certificateItem.innerText = "Awards"
+                certificateItem.href = "#awards"
+                pageNav.appendChild(certificateItem)
+                break
+            }
+        }
 
     socialMediaDiv = document.createElement("div")
     socialMediaDiv.className = "socialMediaDiv"
@@ -171,17 +208,22 @@ function loadWorkExperience(tag) {
 
 function createWorkExperienceElement(object, tag) {
 
-    wEdiv = document.createElement("div")
-    wEdiv.className = "workExperienceItem boxBorder"
+    workDiv = document.createElement("div")
+    workDiv.className = "workExperienceItem boxBorder"
 
-    wEImg = document.createElement("img")
-    wEImg.src = object.image
-    wEImg.className = "workExperienceImage"
-    wEdiv.appendChild(wEImg)
+    workImgDiv = document.createElement("div")
+    workImgDiv.className = "workImgDiv"
+    workDiv.appendChild(workImgDiv)
+
+        // Work Experience Image
+        workImg = document.createElement("img")
+        workImg.src = object.image
+        workImg.className = "workExperienceImage"
+        workImgDiv.appendChild(workImg)
 
     wEDescriptionDiv = document.createElement("div")
     wEDescriptionDiv.className = "workExperienceDiv"
-    wEdiv.appendChild(wEDescriptionDiv)
+    workDiv.appendChild(wEDescriptionDiv)
 
     // Write the job title
     wETitle = document.createElement("p")
@@ -209,7 +251,7 @@ function createWorkExperienceElement(object, tag) {
             }
         }
     }
-    document.getElementById("workExperience").appendChild(wEdiv)
+    document.getElementById("workExperience").appendChild(workDiv)
 }
 
 function loadEducation(tag) {
@@ -347,22 +389,16 @@ function loadAwardsAndCertificates(tag) {
     for (c in data.awardsAndCertificates.certificates) {
         if (data.awardsAndCertificates.certificates[c].tags.includes(tag)) {
             document.getElementById("awardsAndCertificates").style.display = "block";
-            for (let c in data.awardsAndCertificates.certificates) {
-                if (data.awardsAndCertificates.certificates[c].tags.includes(tag)) {
-                    createAwardOrCertificate(data.awardsAndCertificates.certificates[c], "certificates")
-                }
-            }
+            document.getElementById("certificates").style.display = "block"
+            createAwardOrCertificate(data.awardsAndCertificates.certificates[c], "certificates")
         }
     } 
     // Load the awards card
     for (a in data.awardsAndCertificates.awards) {
         if (data.awardsAndCertificates.awards[a].tags.includes(tag)) {
             document.getElementById("awardsAndCertificates").style.display = "block";
-            for (let a in data.awardsAndCertificates.awards) {
-                if (data.awardsAndCertificates.awards[a].tags.includes(tag)) {
-                    createAwardOrCertificate(data.awardsAndCertificates.awards[a], "awards")
-                }
-            }
+            document.getElementById("awards").style.display = "block"
+            createAwardOrCertificate(data.awardsAndCertificates.awards[a], "awards")
         }
     }   
 }

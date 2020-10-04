@@ -392,11 +392,15 @@ function createWorkExperience(object, tag) {
     handleImg.src = "img/default/drag-icon.png"
     handleDiv.appendChild(handleImg)
 
-    // Work Experience Image
-    workImg = document.createElement("img")
-    workImg.src = object.image
-    workImg.className = "workExperienceImage"
-    workDiv.appendChild(workImg)
+    workImgDiv = document.createElement("div")
+    workImgDiv.className = "workImgDiv"
+    workDiv.appendChild(workImgDiv)
+
+        // Work Experience Image
+        workImg = document.createElement("img")
+        workImg.src = object.image
+        workImg.className = "workExperienceImage"
+        workImgDiv.appendChild(workImg)
 
     workDescriptionDiv = document.createElement("div")
     workDescriptionDiv.className = "workExperienceDiv"
@@ -566,7 +570,7 @@ function removeAward() {
 
 function addResponsibility() {
     outputJson()
-    console.log("addingResponsibility")
+    console.log("addingResponsibility". this)
     var responsibilitiesParent = this.closest(".workExperienceDiv").getElementsByClassName("responsibilityParent")[0]
     
     // Parent div
@@ -595,7 +599,7 @@ function addResponsibility() {
     tags = document.createElement("input")
     tags.addEventListener("input", outputJson)
     tags.className = "tags"
-    tags.placeholder = "Tags"
+    tags.placeholder = "Responsibility Tags"
     responsibilitiesDiv.appendChild(tags)
 
     // Remove Responsibility Button
@@ -919,7 +923,6 @@ function createWritings(object) {
     writingTags.addEventListener("input", outputJson)
     writingTags.placeholder = "Article Tags"
     writingTags.value = object.tags
-    // writingTags.value = writingTags.innerText.split(',').join(', ')
     writingsDiv.appendChild(writingTags)
 
     // Article Link Label
@@ -1258,7 +1261,7 @@ function outputJson() {
                     
                     json += '"' + respCounter + '": {'
                     json += '"description":' + '"' + r.value + '",'
-                    var tags = r.closest(".responsibilityDiv").querySelector('[placeholder="Responsibility Tags"').value.split(",")
+                    var tags = r.closest(".responsibilityDiv").querySelector('[placeholder="Responsibility Tags"]').value.split(",")
                     tags = '\"' + tags.join('\",\"') + '\"';
                     json += '"tags": ' + "[" + tags + "]},"
                     // json += '"tags":' + '"' + r.value + '"},'

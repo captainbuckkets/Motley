@@ -304,11 +304,14 @@ a:visited { color: var(--primaryColor)}
     width: 100%;
 }
 
+.workImgDiv {
+    margin: auto 2vw;
+}
+
 /* image on CM */
 .workExperienceImage {
     width: 8vw;
     height: 100%;
-    margin: auto 2vw;
 }
 
  /* text on CM */
