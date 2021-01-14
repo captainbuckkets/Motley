@@ -452,11 +452,11 @@ function loadSkills(tag) {
         createSkill(data.skills.competent[c], "competent")
       }
     }
-    for (let e in data.skills.entryLevel) {
-      if (data.skills.entryLevel[e].tags.includes(tag)) {
+    for (let e in data.skills.familiar) {
+      if (data.skills.familiar[e].tags.includes(tag)) {
         document.getElementById("skills").style.display = "block";
-        document.getElementById("entryLevel").style.display = "block"
-        createSkill(data.skills.entryLevel[e], "entryLevel")
+        document.getElementById("familiar").style.display = "block"
+        createSkill(data.skills.familiar[e], "familiar")
       }
     }
 }

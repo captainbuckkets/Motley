@@ -318,17 +318,18 @@ a:visited { color: var(--primaryColor)}
 
 /* bottom related skills box placement and parent on CM*/
 
-#advanced {
+#advanced, #adequate, #familiar {
     display: none;
+}
+
+#advanced {
     grid-column: 1 / 2;}
 
 #adequate {
-    display: none;
     grid-column: 2 / 3;
 }
 
-#entryLevel {
-    display: none;
+#familiar {
     grid-column: 3 / 3;
 }
 

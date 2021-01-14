@@ -109,9 +109,9 @@ function loadResume() {
         handle: '.moveHandle',
         animation: 150,
     });
-    // Add entryLevel Observer
-    dragObserver("entryLevel")
-    Sortable.create(entryLevel, {
+    // Add familiar Observer
+    dragObserver("familiar")
+    Sortable.create(familiar, {
         handle: '.moveHandle',
         animation: 150,
     });
@@ -193,13 +193,13 @@ function loadSidebar() {
         createSkill(skillDefault, "competent")
     })
 
-    // create entry level skill
-    addEntry = document.createElement("div")
-    addEntry.className = "buttonClass menuButton"
-    addEntry.innerText = "Add Entry-Level Skill"
-    daddy.appendChild(addEntry)
-    addEntry.addEventListener("click", function() {
-        createSkill(skillDefault, "entryLevel")
+    // create familiar level skill
+    addfamiliar = document.createElement("div")
+    addfamiliar.className = "buttonClass menuButton"
+    addfamiliar.innerText = "Add Familiar Skill"
+    daddy.appendChild(addfamiliar)
+    addfamiliar.addEventListener("click", function() {
+        createSkill(skillDefault, "familiar")
     })
 
     // create award
@@ -981,20 +981,21 @@ function loadSkills(tag) {
           }
       }
   
-      // Get Entry Level skills
-      for (let i in data.skills.entryLevel) {
+      // Get Familiar skills
+      for (let i in data.skills.familiar) {
           if (tag == "all") {
-              createSkill(data.skills.entryLevel[i], "entryLevel")
+              createSkill(data.skills.familiar[i], "familiar")
           } else {
-              if (data.skills.entryLevel[i].tags.includes(tag)) {
-                  //console.log(skills.entryLevel[i])
-                  createSkill(data.skills.entryLevel[i], "entryLevel")
+              if (data.skills.familiar[i].tags.includes(tag)) {
+                  //console.log(skills.familiar[i])
+                  createSkill(data.skills.familiar[i], "familiar")
               }
           }
       }
   }
   
 function createSkill(object, parentTag) {
+    console.log("createSkill", parentTag)
     // Create Parent
     skillDiv = document.createElement("div")
     skillDiv.className = "skillItem boxBorder"
@@ -1386,14 +1387,14 @@ function outputJson() {
         json = json.replace(/,\s*$/, "");
         json += "},"
 
-    // Entry Level Skills
-    var entry = document.getElementById("entryLevel")
-    entrySkills = entry.getElementsByClassName("skillItem")
+    // Familiar Level Skills
+    var familiar = document.getElementById("familiar")
+    familiarSkills = familiar.getElementsByClassName("skillItem")
     var eCounter = 0
 
-        json += '"entryLevel": {'
+        json += '"familiar": {'
 
-        for (let e of entrySkills) {
+        for (let e of familiarSkills) {
             var inputs = e.getElementsByTagName("input")
             json += '"' + eCounter + '": {'
             json += '"title":' + '"' + inputs[0].value + '",'
